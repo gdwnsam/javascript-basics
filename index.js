@@ -5,9 +5,24 @@
 // const appDiv = document.getElementById('app');
 // appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
-const { performance } = require('perf_hooks');
-
-var startTime = performance.now()
+//self invoking function
 (() => {
-  console.log('test')
-})()
+  console.log('test');
+})();
+
+
+const basicFunction = () => {
+  console.log('test one');  
+};
+
+basicFunction();
+
+
+const obj = {};
+console.log(obj);
+
+const obj1 = new Object();
+console.log(obj1);
+
+const obj2 = Object.create(Object.prototype, obj1)
+console.log(obj2);
